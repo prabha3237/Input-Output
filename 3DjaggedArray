@@ -1,0 +1,134 @@
+3D jagged Array.
+..
+package com.prabha.java;
+import java.util.Scanner;
+class Array1 {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("enter the no.of organisations:");
+        int m=sc.nextInt();
+        System.out.println("enter the no.of companies:");
+        int n=sc.nextInt();
+        String arr[][][]=new String[m][n][];
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=0;j<arr[i].length;j++)
+            {
+                System.out.println("enter the no.of employees in organisation no:"+(i+1)+"company no:"+(j+1));
+                    arr[i][j]=new String[sc.nextInt()];
+            }
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println("inside organisation no:"+(i+1));
+            for(int j=0;j<arr[i].length;j++)
+            {
+                 System.out.println("inside company no:"+(j+1));
+                 for(int k=0;k<arr[i][j].length;k++)
+                 {
+                     System.out.println("enter the name of employee no:"+(k+1));
+                       arr[i][j][k]=sc.next();
+                 }
+            }
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println("inside organisation no:"+(i+1));
+            for(int j=0;j<arr[i].length;j++)
+            {
+                 System.out.println("inside company no:"+(j+1));
+                 for(int k=0;k<arr[i][j].length;k++)
+                 {
+                     System.out.println("employee "+(k+1)+":"+arr[i][j][k]);
+                 }
+            }
+        }
+    }
+}
+..
+expected output:
+enter the no.of organisations:
+3
+enter the no.of companies:
+2
+enter the no.of employees in organisation no:1company no:1
+1
+enter the no.of employees in organisation no:1company no:2
+1
+enter the no.of employees in organisation no:2company no:1
+11
+enter the no.of employees in organisation no:2company no:2
+
+1
+enter the no.of employees in organisation no:3company no:1
+1
+enter the no.of employees in organisation no:3company no:2
+
+1
+inside organisation no:1
+inside company no:1
+enter the name of employee no:1
+1
+inside company no:2
+enter the name of employee no:1
+1
+inside organisation no:2
+inside company no:1
+enter the name of employee no:1
+1
+enter the name of employee no:2
+1
+enter the name of employee no:3
+1
+enter the name of employee no:4
+1
+enter the name of employee no:5
+1
+enter the name of employee no:6
+1
+enter the name of employee no:7
+1
+enter the name of employee no:8
+1
+enter the name of employee no:9
+1
+enter the name of employee no:10
+1
+enter the name of employee no:11
+1
+inside company no:2
+enter the name of employee no:1
+1
+inside organisation no:3
+inside company no:1
+enter the name of employee no:1
+11
+inside company no:2
+enter the name of employee no:1
+1
+inside organisation no:1
+inside company no:1
+employee 1:1
+inside company no:2
+employee 1:1
+inside organisation no:2
+inside company no:1
+employee 1:1
+employee 2:1
+employee 3:1
+employee 4:1
+employee 5:1
+employee 6:1
+employee 7:1
+employee 8:1
+employee 9:1
+employee 10:1
+employee 11:1
+inside company no:2
+employee 1:1
+inside organisation no:3
+inside company no:1
+employee 1:11
+inside company no:2
+employee 1:1
+..
